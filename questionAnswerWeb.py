@@ -1,10 +1,10 @@
 import streamlit as st
 import cohere
 
-# Get the OpenAI API Key
+# Get the Cohere API Key
 api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
-st.sidebar.markdown("This is Cohere LLM. A brief introduction can be found at: https://docs.cohere.com/docs/the-cohere-platform.")
-st.sidebar.markdown("To get a API key, sign up at: https://dashboard.cohere.ai/welcome/register.")
+st.sidebar.markdown("This QA bot is built on top of Cohere LLM. A brief introduction can be found at: https://docs.cohere.com/docs/the-cohere-platform.")
+st.sidebar.markdown("For question to be answered, an API key is required. To get a API key, sign up at: https://dashboard.cohere.ai/welcome/register.")
 
 
 # Setting up the Title
@@ -25,8 +25,8 @@ def submit_question(question):
 
     result = co.generate(
         prompt = question,
-        max_tokens = 40, 
-        temperature = 0.75, 
+        max_tokens = 100, 
+        temperature = 0.80, 
         num_generations = 1, 
         stop_sequences=["."])
     
