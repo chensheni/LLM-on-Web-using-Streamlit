@@ -2,7 +2,7 @@ import streamlit as st
 import cohere
 
 # Get the Cohere API Key
-api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
+api_key = st.sidebar.text_input("Cohere API Key:", type="password")
 st.sidebar.markdown("This QA bot is built on top of Cohere LLM. A brief introduction can be found at: https://docs.cohere.com/docs/the-cohere-platform.")
 st.sidebar.markdown("For question to be answered, an API key is required. To get a API key, sign up at: https://dashboard.cohere.ai/welcome/register.")
 
