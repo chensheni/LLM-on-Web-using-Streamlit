@@ -3,8 +3,8 @@ import cohere
 
 # Get the OpenAI API Key
 api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
-st.sidebar.text("This is Cohere LLM. A brief introduction can be found at: https://docs.cohere.com/docs/the-cohere-platform.")
-st.sidebar.text("To get a API key, sign up at: https://dashboard.cohere.ai/welcome/register.")
+st.sidebar.markdown("This is Cohere LLM. A brief introduction can be found at: https://docs.cohere.com/docs/the-cohere-platform.")
+st.sidebar.markdown("To get a API key, sign up at: https://dashboard.cohere.ai/welcome/register.")
 
 
 # Setting up the Title
