@@ -11,7 +11,7 @@ st.sidebar.markdown("For question to be answered, an API key is required. To get
 st.title("🕹️ AI Question Answering Bot")
 
 st.write(
-    "_**Intelligent QA bot that will answer all your questions in zero shot based on the context from the internet.**_"
+    "_**Smart LLM will answer all your simple questions, but please don't trap him :)**_"
 )
 
 QUESTION = st.text_input("Input Question 👇")
