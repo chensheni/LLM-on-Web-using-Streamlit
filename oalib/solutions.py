@@ -1,20 +1,21 @@
-"""Library with OpenAI API solutions as functions
+"""Library with Cohere API solutions as functions
 
 References:
 
-For building code:  https://beta.openai.com/docs/guides/code/introduction
+For building code:  https://docs.cohere.com/docs/command-beta
 
 """
 
+# here use 3.10 version, higher version has No module named '_lzma' problem
 import cohere
 import os
 
 
 def submit_question(text):
-    """This submits a question to the OpenAI API"""
+    """This submits a question to the Cohere API"""
 
-    openai.api_key = os.getenv("COHERE_API_KEY")
-    #prompt = text + ""
+    COHERE_API_KEY = os.getenv("COHERE_API_KEY")
+    co = cohere.Client(COHERE_API_KEY)
 
     result = co.generate(
         prompt = text,
@@ -23,6 +24,6 @@ def submit_question(text):
         num_generations = 1, 
         stop_sequences=["."])
     
-    answer = text.generations[0].text[1:]
+    answer = result.generations[0].text[1:]
 
     return answer
