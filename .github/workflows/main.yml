@@ -1,15 +1,17 @@
-name: Python application test with Github Actions using devcontainers
+name: Python application test with Github Actions
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: test build-Build and run dev container task
-      uses: devcontainers/ci@v0.2
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v1
       with:
-        runCmd: |
-          make install
-          make lint
-          make test
-          make format
+        python-version: 3.10
+    - name: install, lint, test, and format
+      run: |
+        make install
+        make lint
+        make test
+        make format
