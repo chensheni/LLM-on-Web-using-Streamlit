@@ -26,7 +26,7 @@ def submit_question(question):
     result = co.generate(
         prompt = question,
         max_tokens = 100, 
-        temperature = 0.80, 
+        temperature = 0.2, 
         num_generations = 1, 
         stop_sequences=["."])
     
