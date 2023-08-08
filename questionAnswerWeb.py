@@ -3,6 +3,7 @@ import cohere
 
 # Get the OpenAI API Key
 api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
+st.sidebar.text("This is Cohere LLM.")
 
 # Setting up the Title
 st.title("🕹️ AI Question Answering Bot")
